@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Catmint
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130910
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+<link href="{{url_for('static', filename='default.css' )}}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{url_for('static', filename='fonts.css' )}}" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="{{url_for('static', filename='default_ie6.css' )}}" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body style="background-color:
+#9a7a9e
+">
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<center><h2 style="color:#f0ff07">A Categorization of Cloud-Based Services and their Security Analysis in the Healthcare Sector</h2></center>
+
+
+
+
+
+	</header>
+
+
+        <br><br><br><br><br><br><br><br>
+
+
+	<div class="col-md-8"><center>
+		{% if msg!=null:
+
+%}
+ <textarea cols="50" rows="10" id="source">{{ msg }}</textarea>
+    <br>
+    <button type="button" id="save" title="Save as text file">Download</button>
+
+    <script type="text/javascript">
+        document.getElementById("save").onclick = function() {
+            var content = document.getElementById('source').value;
+            window.open("data:application/txt," + encodeURIComponent(content), "_self");
+        }
+    </script>
+{% endif%}
+                                            <b> <a href="{{ url_for('re') }}">Go Back...</a></b>
+
+	</div></center>
+</center>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
